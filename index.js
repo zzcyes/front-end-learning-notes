@@ -73,6 +73,9 @@ const createTemplate = () => {
         thirdTemplate[series.series] = content.join("\n\n");
     });
     Object.keys(thirdTemplate).forEach(key => {
+        if (key === 'images') {
+            return;
+        }
         writeTemplate += `## ${key} \n\n`;
         writeTemplate += `${thirdTemplate[key]}\n\n`
     });
