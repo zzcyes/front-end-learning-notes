@@ -1,6 +1,6 @@
 # reduce
 
-`**reduce()**` 方法对副本中的每个元素执行一个由您提供的**reducer**函数（升序执行），将其结果汇总为相应的返回值。
+`reduce()` 方法对副本中的每个元素执行一个由您提供的**reducer**函数（升序执行），将其结果汇总为相应的返回值。
 
 ## 示例
 ```javascript
@@ -46,7 +46,7 @@ arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]
  Array.prototype._reduce = function (fun) {
     if (this === void 0 || this === null) { throw TypeError(); }
     var t = Object(this);
-    var len = t.length >>> 0; 
+    var len = t.length >>> 0;
     if (typeof fun !== "function") { throw TypeError(); }
     if (len === 0 && arguments.length === 1) { throw TypeError(); }
     var k = 0;

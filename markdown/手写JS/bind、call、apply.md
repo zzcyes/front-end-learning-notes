@@ -1,7 +1,7 @@
 # bind、call、apply
 
 ## bind
-`**bind()**` 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
+`bind()` 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
 
 ### 示例
 ```javascript
@@ -73,7 +73,7 @@ Function.prototype._bind = function (thisArg,...args1) {
 ```
 
 ## call
-`**call()**` 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。
+`call()` 方法使用一个指定的 `this` 值和单独给出的一个或多个参数来调用一个函数。
 
 ### 示例
 ```javascript
@@ -109,11 +109,11 @@ function.call(thisArg, arg1, arg2, ...)
 
 ### 实现
 ```javascript
-Function.prototype._call = function(thisArg, ...args) { 
-  	thisArg = thisArg || this; 
+Function.prototype._call = function(thisArg, ...args) {
+  	thisArg = thisArg || this;
   	const fun = Symbol('fun')
-    thisArg[fun] = this; 
-    const result = thisArg[fun](...args); 
+    thisArg[fun] = this;
+    const result = thisArg[fun](...args);
     delete thisArg[fun];
     return result;
 }
@@ -146,15 +146,15 @@ func.apply(thisArg, [argsArray])
 可选的。一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 [`null`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) 或  [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。 [浏览器兼容性](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply#Browser_compatibility) 请参阅本文底部内容。
 
 ### 返回值
-调用有指定`**this**`值和参数的函数的结果。
+调用有指定`this`值和参数的函数的结果。
 
 ### 实现
 ```javascript
-Function.prototype._apply = function(thisArg, argsArray) { 
+Function.prototype._apply = function(thisArg, argsArray) {
   	thisArg = thisArg || this;
     const fun = Symbol('fun')
-    thisArg[fun] = this; 
-    const result = thisArg[fun](...argsArray); 
+    thisArg[fun] = this;
+    const result = thisArg[fun](...argsArray);
     delete thisArg[fun];
     return result;
 }
