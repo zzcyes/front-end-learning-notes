@@ -1,0 +1,22 @@
+{
+    "name": "front-end-learning-notes",
+    "version": "1.0.0",
+    "description": "Front-end Learning Notes",
+    "main": "index.js",
+    "scripts": {
+        "init": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zzcyes/front-end-learning-notes.git"
+    },
+    "keywords": [
+        "front-end"
+    ],
+    "author": "zzcyes",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zzcyes/front-end-learning-notes/issues"
+    },
+    "homepage": "https://github.com/zzcyes/front-end-learning-notes#readme"
+}

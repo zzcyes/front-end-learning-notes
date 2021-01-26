@@ -1,5 +1,9 @@
 # front-end-learning-notes 
 
+## JavaScript 
+
+- ### [模块(JS红宝书笔记)](./markdown/JavaScript/模块(JS红宝书笔记).md)
+
 ## 手写JS 
 
 - ### [bind、call、apply](./markdown/手写JS/bind、call、apply.md)
