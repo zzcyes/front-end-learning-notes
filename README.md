@@ -8,9 +8,13 @@
 
 ## VUE 
 
-- ### [编译-parse](./markdown/VUE/编译-parse.md)
+- ### [编译-01-编译入口](./markdown/VUE/编译-01-编译入口.md)
 
-- ### [编译-编译入口](./markdown/VUE/编译-编译入口.md)
+- ### [编译-02-parse](./markdown/VUE/编译-02-parse.md)
+
+- ### [编译-03-optimize](./markdown/VUE/编译-03-optimize.md)
+
+- ### [编译-04-codegen](./markdown/VUE/编译-04-codegen.md)
 
 ## 手写JS 
 
